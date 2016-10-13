@@ -58,6 +58,11 @@ variable "desired_count" {
   default     = 1
 }
 
+variable "ignore_changes" {
+  description = "list of resource names for which terraform should ignore changes"
+  default = []
+}
+
 variable "memory" {
   description = "The number of MiB of memory to reserve for the container"
   default     = 512
@@ -80,6 +85,7 @@ resource "aws_ecs_service" "main" {
 
   lifecycle {
     create_before_destroy = true
+    ignore_changes        = "${var.ignore_changes}"
   }
 }
 

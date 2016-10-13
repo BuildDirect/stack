@@ -413,6 +413,7 @@
 | command | The raw json of the task command | `"[]"` | no |
 | env_vars | The raw json of the task env vars | `"[]"` | no |
 | desired_count | The desired count | `2` | no |
+| ignore_changes | list of resources for which changes should be ignored by tf | `[]` | no |
 | memory | The number of MiB of memory to reserve for the container | `512` | no |
 | cpu | The number of cpu units to reserve for the container | `512` | no |
 | protocol | The ELB protocol, HTTP or TCP | `"HTTP"` | no |
@@ -530,6 +531,7 @@
 | command | The raw json of the task command | `"[]"` | no |
 | env_vars | The raw json of the task env vars | `"[]"` | no |
 | desired_count | The desired count | `2` | no |
+| ignore_changes | list of resources for which changes should be ignored by tf | `[]` | no |
 | memory | The number of MiB of memory to reserve for the container | `512` | no |
 | cpu | The number of cpu units to reserve for the container | `512` | no |
 
@@ -572,5 +574,6 @@
 | command | The raw json of the task command | `"[]"` | no |
 | env_vars | The raw json of the task env vars | `"[]"` | no |
 | desired_count | The desired count | `1` | no |
+| ignore_changes | list of resources for which changes should be ignored by tf | `[]` | no |
 | memory | The number of MiB of memory to reserve for the container | `512` | no |
 | cpu | The number of cpu units to reserve for the container | `512` | no |

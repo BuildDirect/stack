@@ -107,6 +107,11 @@ variable "iam_role" {
   description = "IAM Role ARN to use"
 }
 
+variable "ignore_changes" {
+  description = "list of resource names for which terraform should ignore changes"
+  default = []
+}
+
 variable "zone_id" {
   description = "The zone ID to create the record in"
 }
@@ -130,6 +135,7 @@ resource "aws_ecs_service" "main" {
 
   lifecycle {
     create_before_destroy = true
+    ignore_changes        = "${var.ignore_changes}"
   }
 }
 
