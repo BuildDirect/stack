@@ -60,7 +60,7 @@ variable "desired_count" {
 
 variable "ignore_changes" {
   description = "list of resource names for which terraform should ignore changes"
-  default = []
+  default = "[]"
 }
 
 variable "memory" {
