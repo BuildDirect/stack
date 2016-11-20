@@ -109,7 +109,6 @@ variable "iam_role" {
 
 variable "ignore_changes" {
   description = "list of resource names for which terraform should ignore changes"
-  default = "${list()}"
 }
 
 variable "zone_id" {
