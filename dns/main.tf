@@ -17,14 +17,14 @@ variable "name" {
   description = "Zone name, e.g stack.local"
 }
 
-variable "vpc" {
+variable "vpc_id" {
   description = "The VPC ID (omit to create a public zone)"
   default     = ""
 }
 
 resource "aws_route53_zone" "main" {
   name    = "${var.name}"
-  vpc  = "${var.vpc_id}"
+  vpc_id  = "${var.vpc_id}"
   comment = ""
 }
 
