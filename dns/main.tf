@@ -24,7 +24,6 @@ variable "vpc" {
 
 resource "aws_route53_zone" "main" {
   name    = "${var.name}"
-  vpc  = "${var.vpc_id}"
   comment = ""
 }
 
